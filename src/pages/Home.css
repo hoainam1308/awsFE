@@ -1,10 +1,9 @@
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
-  max-width: 1000px;   /* ✅ Giới hạn chiều rộng của grid */
-  margin: 0 auto;       /* ✅ Căn giữa theo chiều ngang */
-  justify-content: center; /* ✅ Căn giữa các item khi thiếu */
+  max-width: 100%;
 }
 
 .product-card {
@@ -15,6 +14,8 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease;
   background: #fff;
+  max-width: 260px;
+  flex: 0 0 auto;
 }
 
 .product-card:hover {
