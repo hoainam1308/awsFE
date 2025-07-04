@@ -1,0 +1,31 @@
+/* src/pages/PaymentSuccess.css */
+.payment-success-container {
+  max-width: 500px;
+  margin: 80px auto;
+  text-align: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.success-text {
+  color: green;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.fail-text {
+  color: red;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.btn-back {
+  text-decoration: none;
+  color: white;
+  background-color: #1976d2;
+  padding: 10px 16px;
+  border-radius: 6px;
+  display: inline-block;
+}

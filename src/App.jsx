@@ -6,13 +6,14 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Cart from "./pages/Cart";
 import ProductDetail from "./pages/ProductDetail";
+import MyOrders from "./pages/MyOrders";
+import PaymentSuccess from "./pages/PaymentSuccess";
 import { AuthProvider } from "./contexts/AuthContext";
 import "./App.css";
 
 const App = () => {
   return (
     <AuthProvider>
-      <div className="app">
         <Router>
           <Navbar />
           <div className="main-content">
@@ -22,10 +23,11 @@ const App = () => {
               <Route path="/register" element={<Register />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/product/:id" element={<ProductDetail />} />
+              <Route path="/my-orders" element={<MyOrders />} />
+              <Route path="/payment-success" element={<PaymentSuccess />} />
             </Routes>
           </div>
         </Router>
-      </div>
     </AuthProvider>
   );
 };

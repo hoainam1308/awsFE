@@ -1,66 +1,77 @@
 .product-detail-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
-  padding: 30px;
-  max-width: 1000px;
-  margin: auto;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-.product-image img {
-  width: 400px;
+.product-image {
+  width: 450px;
+  max-width: 100%;
   height: auto;
-  border-radius: 10px;
-  object-fit: cover;
+  border-radius: 12px;
+  object-fit: contain;
+  border: 1px solid #eee;
 }
 
 .product-info {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.product-info h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  font-weight: bold;
+.product-title {
+  font-size: 48px;
+  font-weight: 900;
+  color: #222;
+  margin-bottom: 20px;
+  line-height: 1.4;
 }
 
 .description {
-  font-size: 16px;
+  font-size: 18px;
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .price {
-  font-size: 24px;
+  font-size: 28px;
   color: red;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
 }
 
 .quantity-section {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
 .quantity-section input {
-  width: 60px;
-  padding: 6px;
-  font-size: 16px;
+  width: 70px;
+  padding: 8px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 .add-cart-btn {
-  padding: 10px 20px;
+  padding: 12px 24px;
   background-color: #1976d2;
   color: white;
+  font-size: 18px;
+  font-weight: 600;
   border: none;
-  font-size: 16px;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: background-color 0.2s;
 }
 
 .add-cart-btn:hover {
@@ -69,6 +80,7 @@
 
 .loading {
   text-align: center;
-  padding: 40px;
-  font-size: 20px;
+  padding: 60px;
+  font-size: 22px;
+  font-weight: 500;
 }

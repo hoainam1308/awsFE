@@ -18,7 +18,7 @@ const Navbar = () => {
       {user?.role === 'admin' && <Link to="/admin">🔧 Quản trị</Link>}
       {user ? (
         <>
-          <span>👤 {user.name}</span>
+          <Link to="/my-orders">👤 {user.email}</Link>
           <button onClick={handleLogout}>Đăng xuất</button>
         </>
       ) : (

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./ProductDetail.css"; // CSS riêng
+import "./ProductDetail.css";
 import { useAuth } from "../contexts/AuthContext";
 
 const ProductDetail = () => {
@@ -9,6 +9,7 @@ const ProductDetail = () => {
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
+  const { user } = useAuth();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -21,8 +22,6 @@ const ProductDetail = () => {
     };
     fetchProduct();
   }, [id]);
-
-  const { user } = useAuth();
 
   const addToCart = () => {
     if (!user) {
@@ -45,7 +44,6 @@ const ProductDetail = () => {
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     navigate("/cart");
-    console.log("Sản phẩm đã được thêm vào giỏ hàng:", product.productName);
   };
 
   if (!product) return <div className="loading">Đang tải sản phẩm...</div>;
@@ -59,7 +57,7 @@ const ProductDetail = () => {
         />
       </div>
       <div className="product-info">
-        <h2>{product.productName}</h2>
+        <h2 className="product-title">{product.productName}</h2>
         <p className="description">{product.description}</p>
         <p className="price">{product.price.toLocaleString()} ₫</p>
         <div className="quantity-section">
